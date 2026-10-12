@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Spider Xenotypes - Big and Small Patch</name>
+	<name>Big and Small - Spider Xenotypes</name>
 	<author>DanZinagri</author>
 	<supportedVersions>
 		<li>1.6</li>
+		<li>1.7</li>
 	</supportedVersions>
 	<packageId>DanZinagri.SpiderXenotypesBS</packageId>
 	<description>
@@ -23,7 +24,7 @@
 	</modDependencies>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
-		<li>Ludeon.Biotech</li>
+		<li>Ludeon.RimWorld.Biotech</li>
 		<li>redmattis.betterprerequisites</li>
 		<li>redmattis.bigsmall.core</li>
 		<li>euterpe.milkytitfuck</li>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Hemox carries vanilla Hair_BrightRed as a stand-in for Genes & More's BS_BloodHair
+         (which is MayRequire'd in the def). Two hair-colour genes would pick one at random,
+         so drop the stand-in when the real one is available. Every other G&M-only gene is
+         handled with MayRequire directly in SpiderXenotypes.xml. -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Big and Small - Genes &amp; More</li>
+        </mods>
+        <match Class="PatchOperationRemove">
+            <xpath>/Defs/XenotypeDef[defName="Hemox"]/genes/li[text()="Hair_BrightRed"]</xpath>
+        </match>
+    </Operation>
+</Patch>
