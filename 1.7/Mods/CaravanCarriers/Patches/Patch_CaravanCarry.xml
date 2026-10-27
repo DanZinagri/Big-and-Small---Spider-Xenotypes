@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Caravan riding speed for the spider bodies. Only loads with Caravan Carriers (DanZinagri.CaravanCarriers):
+       vanilla treats every humanlike as a rider and ignores this stat on them, so without that mod it would only be
+       a gene-tooltip line that does nothing. With it, the spider carries one caravan member at this speed, the way a
+       rideable animal does. statFactors on a base of 1.0, so 1.4 means 140%.
+       Each gene is checked first: add to its statFactors if it has one, otherwise give it one. -->
+
+    <!-- DZ_SpiderBody_Arakron (Arakron): 160% -->
+    <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="DZ_SpiderBody_Arakron"]/statFactors</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="DZ_SpiderBody_Arakron"]/statFactors</xpath>
+      <value>
+        <CaravanRidingSpeedFactor>1.6</CaravanRidingSpeedFactor>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="DZ_SpiderBody_Arakron"]</xpath>
+      <value>
+        <statFactors>
+          <CaravanRidingSpeedFactor>1.6</CaravanRidingSpeedFactor>
+        </statFactors>
+      </value>
+    </nomatch>
+  </Operation>
+
+    <!-- DZ_SpiderBody_Wolf (Wolf Spider): 150% -->
+    <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="DZ_SpiderBody_Wolf"]/statFactors</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="DZ_SpiderBody_Wolf"]/statFactors</xpath>
+      <value>
+        <CaravanRidingSpeedFactor>1.5</CaravanRidingSpeedFactor>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="DZ_SpiderBody_Wolf"]</xpath>
+      <value>
+        <statFactors>
+          <CaravanRidingSpeedFactor>1.5</CaravanRidingSpeedFactor>
+        </statFactors>
+      </value>
+    </nomatch>
+  </Operation>
+
+    <!-- BS_SpiderBody_Hair: 140% -->
+    <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="BS_SpiderBody_Hair"]/statFactors</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="BS_SpiderBody_Hair"]/statFactors</xpath>
+      <value>
+        <CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="BS_SpiderBody_Hair"]</xpath>
+      <value>
+        <statFactors>
+          <CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+        </statFactors>
+      </value>
+    </nomatch>
+  </Operation>
+
+    <!-- BS_SpiderBody_Cloth (Nurserachne): 140% -->
+    <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="BS_SpiderBody_Cloth"]/statFactors</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="BS_SpiderBody_Cloth"]/statFactors</xpath>
+      <value>
+        <CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="BS_SpiderBody_Cloth"]</xpath>
+      <value>
+        <statFactors>
+          <CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+        </statFactors>
+      </value>
+    </nomatch>
+  </Operation>
+
+    <!-- BS_SpiderBody_Silk (Silk Weaver): 140% -->
+    <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="BS_SpiderBody_Silk"]/statFactors</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="BS_SpiderBody_Silk"]/statFactors</xpath>
+      <value>
+        <CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="BS_SpiderBody_Silk"]</xpath>
+      <value>
+        <statFactors>
+          <CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+        </statFactors>
+      </value>
+    </nomatch>
+  </Operation>
+
+    <!-- BS_SpiderBody_Tyrian (Tyrian Weaver): 140% -->
+    <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="BS_SpiderBody_Tyrian"]/statFactors</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="BS_SpiderBody_Tyrian"]/statFactors</xpath>
+      <value>
+        <CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="BS_SpiderBody_Tyrian"]</xpath>
+      <value>
+        <statFactors>
+          <CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+        </statFactors>
+      </value>
+    </nomatch>
+  </Operation>
+
+    <!-- BS_SpiderBody_Hemo (Hemox): 140% -->
+    <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="BS_SpiderBody_Hemo"]/statFactors</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="BS_SpiderBody_Hemo"]/statFactors</xpath>
+      <value>
+        <CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="BS_SpiderBody_Hemo"]</xpath>
+      <value>
+        <statFactors>
+          <CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+        </statFactors>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

@@ -8,5 +8,6 @@
 		<li>/</li>
 		<li>1.7</li>
 		<li IfModNotActive="RedMattis.BigSmall.Core">1.7/Mods/NoGenesAndMore</li>
+		<li IfModActive="DanZinagri.CaravanCarriers">1.7/Mods/CaravanCarriers</li>
 	</v1.7>
 </loadFolders>
