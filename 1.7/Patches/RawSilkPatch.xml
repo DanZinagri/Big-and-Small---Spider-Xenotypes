@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Medieval Overhaul Production Expansion adds raw silk that is spun 1:1 into MO silk; the silk
+         abdomen makes raw silk instead so it goes through the same chain. saveKey is left alone so
+         production progress carries over. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Knave_RawSilk"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="BS_SpiderBody_Silk"]/modExtensions/li[@Class="BigAndSmall.ProductionGeneSettings"]/product</xpath>
+                    <value>
+                        <product>Knave_RawSilk</product>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="BS_SpiderBody_Silk"]/description</xpath>
+                    <value>
+                        <description>Carriers of this gene have their lower half replaced with the body of a spider. Has science gone too far?\n\nProduces 30 raw silk every 4 days, modified by body-size.\n\nSpider body has hair-colour</description>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="BS_SpiderBody_Silk"]/modExtensions/li[@Class="BigAndSmall.ProductionGeneSettings"]/progressName</xpath>
+                    <value>
+                        <progressName>Producing Raw Silk</progressName>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
